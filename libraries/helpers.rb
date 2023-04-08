@@ -29,7 +29,7 @@ module PostgreSQL
         raise 'Unable to determine installed PostgreSQL version' if nil_or_empty?(pgsql_package)
 
         pgsql_package_version = pgsql_package.first[1].fetch('version').to_i
-        Chef::Log.info("Deteched PostgreSQL version: #{pgsql_package_version}")
+        Chef::Log.info("Detected PostgreSQL version: #{pgsql_package_version}")
 
         pgsql_package_version
       end
